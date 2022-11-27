@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "GetAll";
+    Layout = "~/Views/Shared/_SysAdminLayout.cshtml";
+}
+
+<h1>GetAll</h1>
+
+<table class=" ="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Adı</th>
+            <th>Açıklaması</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <th>@item.Name</th>
+                <th>@item.Desciription</th>
+            </tr>
+            
+        }
+    </tbody>
+
+</table>

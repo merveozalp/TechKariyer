@@ -1,0 +1,29 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_SysAdminLayout.cshtml";
+}
+
+<h1>AddProduct</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name">Ürün Adı </label>
+        <input type="text" class="form-control" asp-for="Name" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Desciription">Ürün Açıklaması </label>
+        <input type="text" class="form-control" asp-for="Desciription" />
+    </div>
+
+   @* <div class="form-group">
+        <label asp-for="Categories">Ürün Kategorisi </label>
+        <input type="checkbox" class="form-control" asp-for="Categories" />
+    </div>*@
+
+    <div>
+        <button class="btn btn-dark" type="submit"> Ürün Ekle </button>
+    </div>
+</form>
+

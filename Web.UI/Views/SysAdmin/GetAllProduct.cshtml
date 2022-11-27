@@ -1,0 +1,48 @@
+﻿
+@model List<ProductListDto>
+@{
+    Layout = "~/Views/Shared/_SysAdminLayout.cshtml";
+}
+
+<h1>Ürün Listesi</h1>
+
+<table class="table table-bordered table-striped">
+    <tr>
+
+     <th>Markası</th>
+     <th>Ürün Adı</th>
+     <th>Categorisi</th>
+     <th>Rengi</th>
+     <th>Fiyatı</th>
+     
+
+
+
+    </tr>
+    @if (Model.Count() == 0)
+    {
+            <tr>
+                <td colspan=3>Hiç bir ürün yoktur</td>
+            </tr>
+    }
+    else
+    {
+        @foreach (var item in Model)
+        {
+                   <tr>
+                       <td>@item.Brands</td>
+                       <td>@item.Name</td>
+                       <td>@item.Categories</td>
+                       <td>@item.Colours</td>
+                       <td>@item.Prices</td>
+                       
+                          <td>
+            <a asp-controller="" asp-action="" type="sumbit" class="btn btn-success"> Mola Ekle</a>
+            <a asp-controller="" asp-action="" type="sumbit" class="btn btn-success"> Mola Ekle</a>
+            <a asp-controller="" asp-action="" type="sumbit" class="btn btn-success"> Mola Ekle</a>
+        </td>
+
+                   </tr>
+        }
+    }
+</table>
